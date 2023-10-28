@@ -27,11 +27,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+    let sumAnswer = sum(a,b);
+  sumAnswer=sum(sumAnswer[0], c);
+  let multAnswer = multiply(a,b);
+  multAnswer = multiply(multAnswer[0],c);
+  let sumString = `${a} and ${b} and ${c} sum to ${sumAnswer[0]}.`;
+  let multString = `The product of ${a} and ${b} and ${c} is ${multAnswer[0]}.`;
+  return [sumAnswer[0],multAnswer[0], sumString, multString ];
+
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
